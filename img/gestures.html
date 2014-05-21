@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src ="webcamswiper/webcam-swiper-0.1.js" type="text/javascript">
+  var canvas = document.getElementById("#gesture")
+  function left{
+    canvas.style.color = "blue";
+  }
+  function right{
+    canvas.style.color = "red";
+  }
+  canvas.bind("webcamSwipeLeft", left);
+  canvas.bind("webcamSwipeRight", right);
+  window.initializeWebcamSwiper()
+  </script>
+</head>
+<body>
+  <canvas id="gesture" style="height:500px;width:500px;border:solid 1px red;"> 	
+	</canvas>
+</body>
+</html>

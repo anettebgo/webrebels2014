@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Rebel and Evolve</title>
+    <!-- build:css styles/styles.css-->
+    <link rel="stylesheet" type="text/css" href="bower_components/prism/themes/prism-tomorrow.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <!-- endbuild-->
+  </head>
+  <body>
+    <article>
+      <section data-bespoke-hash="title">
+        <h1>rebel and evolve!</h1>
+        <h2>moving beyond point-and-click</h2>
+        <div class="intro">
+          <div class="twitter">@anettebgo</div>
+          <div src="img/bouvet.png" class="bouvet"></div>
+        </div>
+      </section>
+      
+      <section class="centered" data-bespoke-hash="ubiq-web">
+        <blockquote cite="http://www.w3.org/UbiWeb/">W3C's <strong>Ubiquitous Web Domain</strong> is focusing on technologies to enable Web access for <em>anyone, anywhere, anytime</em>, using <strong>any device.</strong></blockquote>
+      </section>
+          
+      <section class="centered" data-bespoke-hash="responsive">
+        <img src="img/responsive.png" alt="responsive" class="fit-width"/>
+        <!-- http://commons.wikimedia.org/wiki/File:Responsive_Web_Design_for_Desktop,_Notebook,_Tablet_and_Mobile_Phone.png -->
+      </section>      
+      
+      <section class="centered" data-bespoke-hash="progressive">
+        <h2>Progressive enhancement</h2>
+        <div class="progressive-enhancement">
+          <div class="bad"></div>
+          <div class="better"></div>
+          <div class="best"></div>
+        </div>
+        <h2>Graceful degradation</h2>
+      </section>
+      
+      <section class="centered" data-bespoke-hash="mouse">
+        <img src="img/mouse-patent.png" alt="mouse patent" class="fit-width">
+        <h3>From mouse patent docs, 1967</h3>
+      </section>
+      
+      <section class="centered" data-bespoke-hash="keyboard">
+        <h2>dozens of eager keys </h2>
+        <img src="img/keyboard.svg" alt="keyboard" />
+        <h2>used for filling input boxes</h2>
+      </section>
+      
+      <section class="centered" data-bespoke-hash="smbc">
+        <img src="img/smbc.png" class="fit-width"/>
+      </section>
+      
+      <section class="centered" data-bespoke-hash="touch">
+        <h2 onMouseOver="ol()">touch</h2>
+        <br />
+        <br />
+        <canvas id="touch-canvas"></canvas>
+        <object id="tuio" type="application/x-tuio">Plugin FAILED to load</object>
+        <img id="touch-hand" src="img/hand.svg" style="display: none;" />
+      </section>
+      
+      <section data-bespoke-hash="dev-orientation">
+        <h2>Device Orientation</h2>
+        <pre><code class="language-javascript">window.addEventListener('deviceorientation', 
+  function(eventData) {
+  var tiltLeftRight = eventData.gamma;
+  var tiltFrontBack = eventData.beta;
+  var compassDir = eventData.alpha
+
+  deviceOrientationHandler(tiltLeftRight, 
+    tiltFrontBack, compassDir);
+}, false);</code></pre>
+      </section>
+      
+      <section data-bespoke-hash="dev-motion">
+        <h2>Device Motion</h2>
+        <pre><code class="language-javascript">window.addEventListener('devicemotion', 
+  function(eventData){
+  var acceleration = eventData.acceleration;
+  var accelerationG = 
+    eventData.accelerationIncludingGravity;
+  var rotationRate = eventData.rotationRate;
+  
+  deviceMotionHandler(acceleration, 
+    accelerationG, rotationRate);
+}, false);</code></pre>
+<pre>http://www.albertosarullo.com/demos/accelerometer/</pre>
+      </section>       
+            
+      <section class="centered" data-bespoke-hash="play">
+        <h2>Gamepad API</h2>
+        <img src="img/gamepad.svg">
+      </section>      
+      
+      <section class="centered" data-bespoke-hash="play-site">
+        <div class="marketplace">
+        <h2>Marketplace.com</h2>
+          <div class="market-actions fit-width"/>
+            <img id="car" class="market-item car" src="img/car.svg"/>
+            <img id="house" class="market-item house" src="img/house.svg"/>
+            <img id="service" class="market-item service" src="img/service.svg"/>
+            <img id="duck" class="market-item duck" src="img/duck.svg"/>
+          </div>
+          <div id="cars" class="market-actions fit-width hide short">
+            <img class="market-item car" src="img/car.svg"/>
+            <img class="market-item car" src="img/car.svg"/>
+            <img class="market-item car" src="img/car.svg"/>
+            <img class="market-item car" src="img/car.svg"/>
+            <img class="market-item car" src="img/car.svg"/>
+            <img class="market-item car" src="img/car.svg"/>
+          </div>
+          <div id="houses" class="market-actions fit-width hide short">
+            <img class="market-item car" src="img/house.svg"/>
+            <img class="market-item car" src="img/house.svg"/>
+            <img class="market-item car" src="img/house.svg"/>
+            <img class="market-item car" src="img/house.svg"/>
+            <img class="market-item car" src="img/house.svg"/>
+            <img class="market-item car" src="img/house.svg"/>
+          </div>
+          <div id="services" class="hide market-actions fit-width short">
+            <img class="market-item car" src="img/service.svg"/>
+            <img class="market-item car" src="img/service.svg"/>
+            <img class="market-item car" src="img/service.svg"/>
+            <img class="market-item car" src="img/service.svg"/>
+            <img class="market-item car" src="img/service.svg"/>
+            <img class="market-item car" src="img/service.svg"/>
+          </div>
+          <div id="ducks" class="market-actions fit-width hide short">
+            <img class="market-item car" src="img/duck.svg"/>
+            <img class="market-item car" src="img/duck.svg"/>
+            <img class="market-item car" src="img/duck.svg"/>
+            <img class="market-item car" src="img/duck.svg"/>
+            <img class="market-item car" src="img/duck.svg"/>
+            <img class="market-item car" src="img/duck.svg"/>
+          </div>  
+        </div>
+      </section>      
+      
+      <section class="centered" data-bespoke-hash="see-me">
+        <div class="optiworld">
+          <h2>OptiWorld.com</h2>
+          <div class="glasses-vid">
+            <video id="video" style="height:240px; width:320px;"></video>
+            <canvas id="optic-canvas"></canvas>
+            <span onClick="initGlasses()" class="tryme">Try me some glasses on</span>
+          </div>
+          <div class="glasses">
+            <img id="frame1" src="img/frame1.svg" onclick="drawGlasses('#frame1')"/>
+            <img id="frame2" src="img/frame2.svg" onclick="drawGlasses('#frame2')"/>
+            <img id="frame3" src="img/frame3.svg" onclick="drawGlasses('#frame3')"/>
+            <img id="frame4" src="img/frame4.svg" onclick="drawGlasses('#frame4')"/>
+          </div>
+        <div class="marketplace">
+      </section>
+      
+      <section class="centered" data-bespoke-hash="gestures">
+        <canvas onclick="startstop()" id="gesture" class="gesture-canvas"></canvas>
+          http://iambrandonn.github.com/WebcamSwiper
+      </section>
+      
+      <section class="centered" data-bespoke-hash="listen">
+        <h2 onclick="listen()">listen</h2>
+        <div style="height: 350px;">
+          
+          <img id="banana" class="listen-item hide" id="banana" src="img/banana.svg"/>
+          <img id="icecream" class="listen-item hide" id="icecream" src="img/icecream.svg"/>
+          <img id="unicorn" class="listen-item hide" id="unicorn" src="img/uncorn.svg"/>
+        </div>
+        https://github.com/TalAter/annyang
+      </section>
+      
+      <section class="centered" data-bespoke-hash="speak">
+        <h2>Web Speech API</h2>
+        <div class="centered">
+          <div onClick="speak()" class="saysomething">Say something </div>
+          <pre><code class="language-javascript">var u = new SpeechSynthesisUtterance();
+u.text = 'Hello web rebels!';
+speechSynthesis.speak(u);
+</code></pre>
+        </div>
+      </section>
+
+      
+      <section data-bespoke-hash="be-rebel">
+        <img src="img/fist.svg" alt="fist" style="float: right;"/>
+        <div class="web-actions">
+          <span style="left: 240px">swipe</span> 
+          <span style="left: 220px">play</span> 
+          <span style="left: 210px">tilt</span> 
+          <span style="left: 150px">shake</span> 
+          <span style="left: 140px">wave</span>
+          <span style="left: 120px">pinch</span> 
+          <span style="left: 110px">touch</span> 
+          <span style="left: 150px">type</span> 
+          <span style="left: 160px">listen</span> 
+          <span style="left: 180px">press</span> 
+          <span style="left: 200px">click</span> 
+          <span style="left: 210px">speak</span> 
+          <span style="left: 220px">swish</span> 
+          <span style="left: 210px">wiggle</span>
+        </div>       
+      </section> 
+    
+      <section class="centered" data-bespoke-hash="be-boring">
+        <h1>Be boring.</h1>
+        <img class="fit-width" src="img/logo-webrebels.png" />
+      <section>
+      
+    </article>
+    <!-- build:js scripts/scripts.js-->
+    <script src="bower_components/bespoke.js/dist/bespoke.min.js"></script>
+    <script src="bower_components/bespoke-keys/dist/bespoke-keys.min.js"></script>
+    <script src="bower_components/bespoke-scale/dist/bespoke-scale.min.js"></script>
+    <script src="bower_components/bespoke-hash/dist/bespoke-hash.min.js"></script>
+    <script src="bower_components/bespoke-progress/dist/bespoke-progress.min.js"></script>
+    <script src="bower_components/bespoke-state/dist/bespoke-state.min.js"></script>
+    <script src="bower_components/bespoke-forms/dist/bespoke-forms.min.js"></script>
+    <script src="bower_components/prism/prism.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/speak.js"></script>
+    <script src="scripts/lib/magictouch.js"></script>
+    <script src="scripts/touch.js"></script>
+    <script src="scripts/lib/webcam-swiper-0.1.js"></script>
+    <script src="scripts/gesture-draw.js"></script>
+    <script src="scripts/optics.js"></script>    
+    <script src="scripts/gamepad.js"></script>    
+    <script src="scripts/control.js"></script>   
+    <script src="scripts/lib/annyang.js"></script>  
+    <script src="scripts/listen.js"></script>
+    <!-- endbuild-->
+  </body>
+</html>
